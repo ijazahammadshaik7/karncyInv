@@ -11,7 +11,7 @@ const Dashboard = () => {
       <Navbars />
 
       <SideBar />
-      <div className="lg:pl-[250px]  m-5  xl:m-10 2xl:mx-24">
+      <div className="lg:pl-[250px]  m-5 mx-3  xl:m-10 2xl:mx-24">
         <TotalInv />
         <MyPortfolio />
         <Cards />

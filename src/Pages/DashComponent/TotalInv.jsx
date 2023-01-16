@@ -17,20 +17,7 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-const rows = [
-  createData(
-    "Poorvika Mobiles Private Limited",
-    "Rs. 1,00,000",
-    " Rs. 50,000	",
-    " Rs. 50,000	"
-  ),
-  createData(
-    "Universal Private Limited",
-    "Rs. 1,20,000",
-    "Rs. 70,000	",
-    "Rs. 50,000"
-  ),
-];
+const rows = [createData("5,40,000", " 8,00,000	", " 10,00,000	", "2,00,000")];
 
 const TotalInv = () => {
   return (

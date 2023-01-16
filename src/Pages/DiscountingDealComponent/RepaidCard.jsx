@@ -57,7 +57,7 @@ const RepaidCard = () => {
                   </tr>
                   <tr>
                     <td className="md:p-2 ">
-                      <Link to="/dealDetailRepaid">
+                      <Link to="/">
                         <button className="button-3">Deal Details</button>
                       </Link>
                     </td>

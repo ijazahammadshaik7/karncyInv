@@ -53,7 +53,7 @@ const CardDeals = () => {
                   </tr>
                   <tr>
                     <td className="md:p-2 ">
-                      <Link to="/dealDetail">
+                      <Link to="/">
                         <button className="button-3">Deal Details</button>
                       </Link>
                     </td>
