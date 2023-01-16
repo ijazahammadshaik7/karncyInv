@@ -33,31 +33,15 @@ const rows = [
 ];
 
 const TotalInv = () => {
-  // const [flash, setFlash] = useState([]);
-
-  // useEffect(() => {
-  //   const getApiFlash = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://jsonplaceholder.typicode.com/posts"
-  //       );
-  //       setFlash(response.data);
-  //     } catch (err) {
-  //       console.log(err.message);
-  //     }
-  //   };
-  //   getApiFlash();
-  // }, []);
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <TableContainer component={Paper} className="p-3 my-2 nav-shadow">
-            <div className="flex justify-between items-center ">
+        <Grid item md={6}>
+          <TableContainer component={Paper} className=" my-2 nav-shadow">
+            <div className="flex justify-between items-center px-3 my-2">
               <div className="flex items-center gap-2 my-3">
                 <h2 className=" font-semibold text-xl py-1">
-                  Flash Distributions
+                  Total Investment
                 </h2>
               </div>
               <Link to="/newEnterprise" className="button-39 text-right">

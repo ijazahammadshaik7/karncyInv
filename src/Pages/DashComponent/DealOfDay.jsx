@@ -7,7 +7,7 @@ import { Grid } from "@mui/material";
 const DealOfDay = () => {
   return (
     <Grid item md={6} className="">
-      <h2 className="bg-white p-5 rounded-md my-2 nav-shadow backgroundClr">
+      <h2 className="bg-white p-3 font-semibold rounded-md my-1 nav-shadow backgroundClr">
         Deal of the Day
       </h2>
       <Card className="nav-shadow backgroundClr">

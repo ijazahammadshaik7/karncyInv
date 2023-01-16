@@ -4,8 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import MyPortfolioTable from "./MyPortfolioTable";
-import Updates from "./Updates";
+import Transactions from "./Transactions";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,32 +39,37 @@ function a11yProps(index) {
   };
 }
 
-const MyPortfolio = () => {
+const Updates = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
-    <Box sx={{ width: "100%" }} className="nav-shadow bg-white rounded-md my-5">
+    <Box sx={{ width: "100%" }} className="pt-3">
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="My Portfolio" {...a11yProps(0)} className="caps" />
-          <Tab label="Updates" {...a11yProps(1)} className="caps" />
+          <Tab label="Transactions" {...a11yProps(0)} className="caps" />
+          <Tab label="Upcoming" {...a11yProps(1)} className="caps" />
+          <Tab label="Communication" {...a11yProps(2)} className="caps" />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <MyPortfolioTable />
+        <Transactions />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Updates />
+        Upcoming
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Communication
       </TabPanel>
     </Box>
   );
 };
 
-export default MyPortfolio;
+export default Updates;
