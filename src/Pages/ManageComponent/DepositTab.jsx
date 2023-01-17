@@ -54,8 +54,8 @@ const DepositTab = () => {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="Deposit" {...a11yProps(0)} className="caps" />
+          <Tab label="Withdraw" {...a11yProps(1)} className="caps" />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

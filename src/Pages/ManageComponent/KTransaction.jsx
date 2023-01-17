@@ -3,7 +3,9 @@ import React from "react";
 const KTransaction = () => {
   return (
     <div className="bg-white nav-shadow rounded-md">
-      <h3 className="p-2 bg-grayccc rounded-t-md">Karncy Transactions</h3>
+      <h3 className="p-2 py-4 font-semibold bg-blueinput rounded-t-md">
+        Karncy Transactions
+      </h3>
       <div className="p-3 px-12 flex flex-col gap-3">
         <div className="flex  justify-between flex-col sm:flex-row">
           <p>03 Jul ‘21</p>
