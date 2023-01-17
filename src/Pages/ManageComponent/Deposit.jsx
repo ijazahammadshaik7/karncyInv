@@ -16,20 +16,25 @@ const Deposit = () => {
         <h3 className="pb-3">Primary Account</h3>
         <table>
           <tr>
-            <td>Bank Name</td>
-            <td className="pl-5">ICICI Bank LTD</td>
+            <td>
+              Beneficiary Name</td>
+            <td className="pl-5">Nagendra</td>
           </tr>
           <tr>
             <td>Bank Name</td>
             <td className="pl-5">ICICI Bank LTD</td>
           </tr>
           <tr>
-            <td>Bank Name</td>
-            <td className="pl-5">ICICI Bank LTD</td>
+            <td>Branch</td>
+            <td className="pl-5">	HYD</td>
           </tr>
           <tr>
-            <td>Bank Name</td>
-            <td className="pl-5">ICICI Bank LTD</td>
+            <td>Bank A/C Number	</td>
+            <td className="pl-5">192739870320</td>
+          </tr>
+          <tr>
+            <td>IFSC Code	</td>
+            <td className="pl-5">ICICI87229</td>
           </tr>
         </table>
       </div>
