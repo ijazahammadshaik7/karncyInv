@@ -18,7 +18,9 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-const rows = [createData("13%", " 80days", " 763")];
+const rows = [createData("12-11-2022", " 14-11-2022", " 80 Days")];
+const rowing = [createData("13%", "11%", " 02-02-2023")];
+
 function LinearProgressWithLabel(props) {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -90,16 +92,17 @@ const View = () => {
           <TableHead>
             <TableRow className="heading-color">
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                Expected Gross Yield
+              
+               Deal Open Date
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad ">
-                Tenure
+              Deal Close Date
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                XScore V2.0
+              Original Tenure
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                No transaction fee on this deal
+              Deal Value
               </TableCell>
             </TableRow>
           </TableHead>
@@ -115,7 +118,7 @@ const View = () => {
                 <TableCell className="table-pad">{row.calories}</TableCell>
                 <TableCell className="table-pad">{row.fat}</TableCell>
                 <TableCell className="table-pad">
-                  <button className="button-39">Buy Now </button>
+                  	42,83,452 
                 </TableCell>
               </TableRow>
             ))}
@@ -130,18 +133,18 @@ const View = () => {
                 Expected Gross Yield
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad ">
-                Tenure
+              Expected Net Yield
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                XScore V2.0
+              Expected Repayment Date
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                No transaction fee on this deal
+              Score
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {rowing.map((row) => (
               <TableRow
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -152,7 +155,7 @@ const View = () => {
                 <TableCell className="table-pad">{row.calories}</TableCell>
                 <TableCell className="table-pad">{row.fat}</TableCell>
                 <TableCell className="table-pad">
-                  <button className="button-39">Buy Now </button>
+                763
                 </TableCell>
               </TableRow>
             ))}
