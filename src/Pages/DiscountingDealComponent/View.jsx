@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cocoblu from "../../images/poorvika.png";
-
+import TextField from "@mui/material/TextField";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -13,6 +13,10 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
+
+
+
+
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -168,14 +172,31 @@ const View = () => {
           <LinearProgressWithLabel value={progress} className="progress-ht" />
         </Box>
       </div>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} className="nav-shadow bg-white my-8 p-5 rounded-md">
         <Grid container spacing={2}>
-          <Grid item xs={8}></Grid>
-          <Grid item xs={4}></Grid>
-          <Grid item xs={4}></Grid>
-          <Grid item xs={8}></Grid>
+          <Grid item xs={6}>Minimum Deal value</Grid>
+          <Grid item xs={6}>RS.3.89 Lacs</Grid>
+          <Grid item xs={6}>Proposed Investment Amount:</Grid>
+          <Grid item xs={6}> <div className="flex flex-col gap-3 ">
+                      
+                      <TextField
+                        id="outlined-multiline-flexible"
+                        className="input-pad"
+                        
+                        required
+                      />
+                    </div></Grid>
+          <Grid item xs={6}>Expected Net Profit:</Grid>
+          <Grid item xs={6}>Rs. 7,64.81</Grid>
+          <div className="mt-5 flex justify-center">
+                    <button className="button-39 ">Submit</button>
+                  </div>
         </Grid>
       </Box>
+      <div>
+         
+      </div>
+
     </>
   );
 };
