@@ -39,7 +39,7 @@ function a11yProps(index) {
   };
 }
 
-const HistoryTab = () => {
+const HistroyTab = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -53,8 +53,8 @@ const HistoryTab = () => {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="New Deals" {...a11yProps(0)} className="caps" />
-          <Tab label="Past Deals" {...a11yProps(1)} className="caps" />
+          <Tab label="Ongoing deals" {...a11yProps(0)} className="caps" />
+          <Tab label="Close Deals" {...a11yProps(1)} className="caps" />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -67,4 +67,4 @@ const HistoryTab = () => {
   );
 };
 
-export default HistoryTab;
+export default HistroyTab;
