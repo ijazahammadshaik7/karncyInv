@@ -9,6 +9,7 @@ import Reports from "./Pages/Reports";
 import Support from "./Pages/Support";
 import BusinessOwnerDet from "./Pages/DashComponent/BusinessOwnerDet";
 import ManageFunds from "./Pages/ManageFunds";
+import ViewDealDetail from "./Pages/DiscountingDealComponent/ViewDealDetail";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/manageFunds" element={<ManageFunds />} />
           <Route path="/support" element={<Support />} />
           <Route path="/businessOwnerDet" element={<BusinessOwnerDet />} />
+          <Route path="/viewDealDetail" element={<ViewDealDetail />} />
         </Routes>
       </ScrollTOTop>
     </Router>

@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import NewDeal from "./NewDeal";
+import PastDeal from "./PastDeal";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +62,7 @@ const DealTable = () => {
         <NewDeal />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <PastDeal />
       </TabPanel>
     </Box>
   );
