@@ -13,10 +13,8 @@ import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-
-
-
-
+import Credit from "./Credit";
+import Boxes from "./Boxes";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -63,9 +61,9 @@ const View = () => {
   return (
     <>
       <div className="bg-white nav-shadow p-5 rounded-md">
-        <div className="flex justify-between ">
+        <div className="flex gap-3 justify-between flex-col md:flex-row items-start">
           <h5>Invoice Raised For And Recourse On</h5>
-          <div className="flex w-[40%]">
+          <div className="flex  md:w-[40%] items-start">
             <img src={cocoblu} alt="" className="w-12" />
             <p>
               Cocoblu Retail Limited (Rattan India Enterprises group company &
@@ -81,7 +79,7 @@ const View = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-2 my-5">
+        <div className="flex gap-2 my-5 items-start">
           <img src={cocoblu} alt="" className="w-12" />
           <p>
             This deal is being resold by the original purchaser. This is usually
@@ -96,17 +94,16 @@ const View = () => {
           <TableHead>
             <TableRow className="heading-color">
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              
-               Deal Open Date
+                Deal Open Date
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad ">
-              Deal Close Date
+                Deal Close Date
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Original Tenure
+                Original Tenure
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Deal Value
+                Deal Value
               </TableCell>
             </TableRow>
           </TableHead>
@@ -121,9 +118,7 @@ const View = () => {
                 </TableCell>
                 <TableCell className="table-pad">{row.calories}</TableCell>
                 <TableCell className="table-pad">{row.fat}</TableCell>
-                <TableCell className="table-pad">
-                  	42,83,452 
-                </TableCell>
+                <TableCell className="table-pad">42,83,452</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -137,13 +132,13 @@ const View = () => {
                 Expected Gross Yield
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad ">
-              Expected Net Yield
+                Expected Net Yield
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Expected Repayment Date
+                Expected Repayment Date
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Score
+                Score
               </TableCell>
             </TableRow>
           </TableHead>
@@ -158,9 +153,7 @@ const View = () => {
                 </TableCell>
                 <TableCell className="table-pad">{row.calories}</TableCell>
                 <TableCell className="table-pad">{row.fat}</TableCell>
-                <TableCell className="table-pad">
-                763
-                </TableCell>
+                <TableCell className="table-pad">763</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -172,31 +165,43 @@ const View = () => {
           <LinearProgressWithLabel value={progress} className="progress-ht" />
         </Box>
       </div>
-      <Box sx={{ flexGrow: 1 }} className="nav-shadow bg-white my-8 p-5 rounded-md">
+      <Box
+        sx={{ flexGrow: 1 }}
+        className="nav-shadow bg-white my-5 p-5 rounded-md"
+      >
         <Grid container spacing={2}>
-          <Grid item xs={6}>Minimum Deal value</Grid>
-          <Grid item xs={6}>RS.3.89 Lacs</Grid>
-          <Grid item xs={6}>Proposed Investment Amount:</Grid>
-          <Grid item xs={6}> <div className="flex flex-col gap-3 ">
-                      
-                      <TextField
-                        id="outlined-multiline-flexible"
-                        className="input-pad"
-                        
-                        required
-                      />
-                    </div></Grid>
-          <Grid item xs={6}>Expected Net Profit:</Grid>
-          <Grid item xs={6}>Rs. 7,64.81</Grid>
-          <div className="mt-5 flex justify-center">
-                    <button className="button-39 ">Submit</button>
-                  </div>
+          <Grid item xs={6}>
+            Minimum Deal value
+          </Grid>
+          <Grid item xs={6}>
+            RS.3.89 Lacs
+          </Grid>
+          <Grid item xs={6}>
+            Proposed Investment Amount:
+          </Grid>
+          <Grid item xs={6}>
+            {" "}
+            <div className="flex flex-col gap-3 ">
+              <TextField
+                id="outlined-multiline-flexible"
+                className="input-pad"
+                required
+              />
+            </div>
+          </Grid>
+          <Grid item xs={6}>
+            Expected Net Profit:
+          </Grid>
+          <Grid item xs={6}>
+            Rs. 7,64.81
+          </Grid>
+          <div className="mt-5 mx-auto">
+            <button className="button-39 ">Buy Now</button>
+          </div>
         </Grid>
       </Box>
-      <div>
-         
-      </div>
-
+      <Credit />
+      <Boxes />
     </>
   );
 };
