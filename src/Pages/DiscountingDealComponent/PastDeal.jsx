@@ -7,6 +7,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import { Link } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -23,7 +24,9 @@ const PastDeal = () => {
           <img src={cocoblu} alt="" className="w-12" />
           <p>Zetwerk Manufacturing Business Pvt Ltd</p>
         </div>
-        <button className="button-39">View Deal Details</button>
+        <Link to="/viewDealDetail" className="button-39">
+          View Deal Details
+        </Link>
       </div>
       <div className="flex justify-between  py-3">
         <p>Invoice Raised by vendor on: CO849384M1N | Khargon</p>

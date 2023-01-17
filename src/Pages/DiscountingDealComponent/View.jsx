@@ -11,7 +11,7 @@ import TableRow from "@mui/material/TableRow";
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
-
+import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 
 function createData(name, calories, fat, carbs, protein) {
@@ -165,6 +165,14 @@ const View = () => {
           <LinearProgressWithLabel value={progress} className="progress-ht" />
         </Box>
       </div>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={8}></Grid>
+          <Grid item xs={4}></Grid>
+          <Grid item xs={4}></Grid>
+          <Grid item xs={8}></Grid>
+        </Grid>
+      </Box>
     </>
   );
 };

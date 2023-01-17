@@ -12,6 +12,13 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Link } from "react-router-dom";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Checkbox from "@mui/material/Checkbox";
+
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -55,6 +62,33 @@ const NewDeal = () => {
       clearInterval(timer);
     };
   }, []);
+
+  const [open, setOpen] = React.useState(false);
+  const [scroll, setScroll] = React.useState("paper");
+
+  const handleClickOpen = (scrollType) => () => {
+    setOpen(true);
+    setScroll(scrollType);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const descriptionElementRef = React.useRef(null);
+  React.useEffect(() => {
+    if (open) {
+      const { current: descriptionElement } = descriptionElementRef;
+      if (descriptionElement !== null) {
+        descriptionElement.focus();
+      }
+    }
+  }, [open]);
+  //submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setOpen(false);
+  };
 
   return (
     <div className="p-5">
@@ -113,7 +147,85 @@ const NewDeal = () => {
                   <TableCell className="table-pad">{row.calories}</TableCell>
                   <TableCell className="table-pad">{row.fat}</TableCell>
                   <TableCell className="table-pad">
-                    <button className="button-39">Buy Now </button>
+                    <button
+                      onClick={handleClickOpen("paper")}
+                      className="button-39"
+                    >
+                      Buy Now{" "}
+                    </button>
+                    <div>
+                      <Dialog
+                        open={open}
+                        onClose={handleClose}
+                        scroll={scroll}
+                        aria-labelledby="scroll-dialog-title"
+                        aria-describedby="scroll-dialog-description"
+                      >
+                        <DialogTitle id="scroll-dialog-title">
+                          Agreement Details
+                        </DialogTitle>
+                        <DialogContent dividers={scroll === "paper"}>
+                          <DialogContentText
+                            id="scroll-dialog-description"
+                            ref={descriptionElementRef}
+                            tabIndex={-1}
+                          >
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since
+                            the 1500s, when an unknown printer took a galley of
+                            type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also
+                            the leap into electronic typesetting, remaining
+                            essentially unchanged. It was popularised in the
+                            1960s with the release of Letraset sheets containing
+                            Lorem Ipsum passages, and more recently with desktop
+                            publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.Lorem Ipsum is simply dummy
+                            text of the printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy text
+                            ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five
+                            centuries, but also the leap into electronic
+                            typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of
+                            Letraset sheets containing Lorem Ipsum passages, and
+                            more recently with desktop publishing software like
+                            Aldus PageMaker including versions of Lorem
+                            Ipsum.Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum.
+                          </DialogContentText>
+                          <form action="" onSubmit={handleSubmit}>
+                            <div className="flex justify-center items-center px-2">
+                              <Checkbox {...label} name="one" required />
+                              <p className="text-center text-sm">
+                                Accept & Proceed (By accepting you agree to
+                                digital sign the document.)
+                              </p>
+                            </div>
+                            <div className="flex justify-center ">
+                              <div>
+                                <button className="button-39 my-5">
+                                  Submit
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </DialogContent>
+                      </Dialog>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}
