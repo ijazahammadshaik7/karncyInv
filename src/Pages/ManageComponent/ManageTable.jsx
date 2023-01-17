@@ -19,23 +19,18 @@ const ManageTable = () => {
           <TableHead>
             <TableRow className="heading-color">
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                Company Name
+              Account balance
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad ">
-                Deal Value
+              parked for investment
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                Invested Amount
+              withdrawal req
               </TableCell>
               <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                Excepted Gross Yield
+              Available funds
               </TableCell>
-              <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                Tenure
-              </TableCell>
-              <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-                Excepted Repayment Date
-              </TableCell>
+             
             </TableRow>
           </TableHead>
           <TableBody>
@@ -43,13 +38,12 @@ const ManageTable = () => {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                Cocoblu Retail Limited
+              1,00,000
               </TableCell>
-              <TableCell className="table-pad">42,83,452</TableCell>
-              <TableCell className="table-pad">4,00,000</TableCell>
-              <TableCell className="table-pad">13%</TableCell>
-              <TableCell className="table-pad">80 Days</TableCell>
-              <TableCell className="table-pad ">02-02-2023</TableCell>
+              <TableCell className="table-pad">2,00,000</TableCell>
+              <TableCell className="table-pad">- -</TableCell>
+              <TableCell className="table-pad">1,00,000</TableCell>
+           
             </TableRow>
           </TableBody>
         </Table>
