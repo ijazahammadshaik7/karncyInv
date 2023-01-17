@@ -1,9 +1,9 @@
 import Navbars from "../components/Navbars";
 import SideBar from "./DashComponent/SideBar";
 import * as React from "react";
-import HistroyTab from "./OrderHistoryComponent/HistroyTab";
+import HistoryTab from "./OrderHistoryComponent/HistoryTab";
 
-const Settlement = () => {
+const OrderHistory = () => {
   return (
     <>
       <Navbars />
@@ -11,10 +11,10 @@ const Settlement = () => {
       <SideBar />
 
       <div className="lg:pl-[250px]  m-5  xl:m-10 2xl:mx-24 ">
-        <HistroyTab />
+        <HistoryTab />
       </div>
     </>
   );
 };
 
-export default Settlement;
+export default OrderHistory;

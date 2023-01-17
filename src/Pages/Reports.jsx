@@ -1,18 +1,18 @@
 import SideBar from "./DashComponent/SideBar";
 import Navbars from "../components/Navbars";
-import EventDetail from "./InvoiceUploadComponent/EventDetail";
+import DownloadReport from "./ReportsComponent/DownloadReport";
 
-const InvoiceUpload = () => {
+const Reports = () => {
   return (
     <>
       <Navbars />
 
       <SideBar />
       <div className="lg:pl-[250px]  m-5  xl:m-10 2xl:mx-24">
-        <EventDetail />
+        <DownloadReport />
       </div>
     </>
   );
 };
 
-export default InvoiceUpload;
+export default Reports;

@@ -39,7 +39,7 @@ function a11yProps(index) {
   };
 }
 
-const HistroyTab = () => {
+const HistoryTab = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -67,4 +67,4 @@ const HistroyTab = () => {
   );
 };
 
-export default HistroyTab;
+export default HistoryTab;
