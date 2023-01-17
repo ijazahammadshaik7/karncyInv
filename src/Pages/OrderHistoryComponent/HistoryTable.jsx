@@ -13,35 +13,36 @@ const HistoryTable = () => {
         <TableHead>
           <TableRow className="heading-color">
             <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Transaction Id
+             
+               Company Name
             </TableCell>
             <TableCell style={{ fontWeight: "bold" }} className="table-pad ">
-              Financers Name
+            Deal Value
             </TableCell>
             <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Disbursed Amount
+            Invested Amount
             </TableCell>
             <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Financed Amount
+            Excepted Gross Yield
             </TableCell>
             <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Balance
+            Tenure
             </TableCell>
             <TableCell style={{ fontWeight: "bold" }} className="table-pad">
-              Income earned
+            Excepted Repayment Date
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
             <TableCell component="th" scope="row">
-              DTEMDYK9PM
+            Cocoblu Retail Limited
             </TableCell>
-            <TableCell className="table-pad">Pushpa Ketak</TableCell>
-            <TableCell className="table-pad">13 Dec 22</TableCell>
-            <TableCell className="table-pad">₹1,83,558</TableCell>
-            <TableCell className="table-pad">₹1,83,558</TableCell>
-            <TableCell className="table-pad ">₹1,81,250</TableCell>
+            <TableCell className="table-pad">42,83,452</TableCell>
+            <TableCell className="table-pad">4,00,000</TableCell>
+            <TableCell className="table-pad">13%</TableCell>
+            <TableCell className="table-pad">80 Days</TableCell>
+            <TableCell className="table-pad ">02-02-2023</TableCell>
           </TableRow>
         </TableBody>
       </Table>
